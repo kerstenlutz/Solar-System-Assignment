@@ -10,8 +10,12 @@
 
 
 export function find(array, callback) {
-  // Your code goes here...
-  
+  for (let elem in array) {
+    if(callback(array[elem], elem, array)) {
+      return array[elem];
+    }
+  }
+  return undefined;
 }
 
 
