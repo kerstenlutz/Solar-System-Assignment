@@ -5,10 +5,8 @@ import { data } from "../data/data";
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
 export function getEarthData(data) {
-  const planetData = data.planets.find((val) => {
-    return val.name == 'Earth';
-  })
-  return planetData;
+  return data.planets
+  .find((val) => val.name == 'Earth');
 }
 
 

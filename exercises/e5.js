@@ -5,13 +5,9 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsWithMassValue(data, number) {
-  const matchMass = 
-  data.planets.filter((val) => {
-    return val.mass.massValue >= number;
-  }).map((newVal) => {
-    return newVal.name;
-  });
-  return matchMass;
+  return data.planets
+  .filter((val) => val.mass.massValue >= number)
+  .map((newVal) => newVal.name);
 }
 
 
@@ -20,3 +16,4 @@ export function getPlanetsWithMassValue(data, number) {
 // Once you're finished run the test with "npm run test-5"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
+

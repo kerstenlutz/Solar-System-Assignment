@@ -5,13 +5,9 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidsDiscoveredAfterYear(data, year) {
-  const timeLine = 
-  data.asteroids.filter((val) => {
-    return val.discoveryYear > year;
-  }).map((newVal) => {
-    return newVal.name;
-  });
-  return timeLine;
+  return data.asteroids
+  .filter((val) => val.discoveryYear > year)
+  .map((newVal) => newVal.name);
 }
 
 

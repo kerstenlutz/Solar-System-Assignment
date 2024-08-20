@@ -5,12 +5,9 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsNamesWithMoons() {
-  const gotMoons = data.planets.filter((val) => {
-    return val.moons != undefined;
-  }).map((newVal) => {
-    return newVal.name;
-  })
-  return gotMoons;
+  return data.planets
+  .filter((val) => val.moons != undefined)
+  .map((newVal) => newVal.name);
 }
 
 

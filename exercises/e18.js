@@ -23,7 +23,7 @@ export function getGreatestDiscoveryYear(data) {
     return entry[1] > max[1] ? entry : max;
   }, [null, 0]);
 
-  return maxYearEntry[0];
+  return Number(maxYearEntry[0]);
 }
 
 // === TEST YOURSELF ===

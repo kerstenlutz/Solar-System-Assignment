@@ -5,10 +5,8 @@ import { data } from "../data/data";
 // Return example: 42
 
 export function allPlanetsMoonsCount(data) {
-  const moonSum = data.planets.reduce((curr, acc) => {
-    return curr + (acc.moons ? acc.moons.length : 0);
-  }, 0);
-  return moonSum;
+  return data.planets
+  .reduce((curr, acc) => curr + (acc.moons ? acc.moons.length : 0), 0);
 }
 
 
